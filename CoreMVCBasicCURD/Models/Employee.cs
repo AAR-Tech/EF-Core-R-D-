@@ -13,7 +13,7 @@ namespace CoreMVCBasicCURD.Models
         [Key]
         public int Id { get; set; }
 
-        [Column(TypeName = "nvarchar(250)")]
+        [Column("FullName",TypeName = "nvarchar(250)")]
         [Required(ErrorMessage ="please enter employee full name..")]
         [DisplayName("Full Name")]
         public string FulllNmae { get; set; }

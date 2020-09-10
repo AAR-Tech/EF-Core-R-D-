@@ -21,6 +21,11 @@ namespace CoreMVCBasicCURD.Migrations
                 {
                     table.PrimaryKey("PK_Employees", x => x.Id);
                 });
+
+            //migrationBuilder.RenameColumn(
+            //    name: "FulllNmae",
+            //    table: "Employees",
+            //    newName: "FullName");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
