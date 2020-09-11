@@ -1,5 +1,3 @@
-using System;
-
 namespace CoreMVCBasicCURD.Models
 {
     public class ErrorViewModel

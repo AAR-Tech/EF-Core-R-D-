@@ -1,9 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using CoreMVCBasicCURD.Models;
-using Swashbuckle.AspNetCore.Swagger;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -28,16 +23,16 @@ namespace CoreMVCBasicCURD
             // Telling  .NET Core look for following services  e.g Controller, View and Models...may be Web API
             services.AddControllersWithViews();
             services.AddMvc().SetCompatibilityVersion(Microsoft.AspNetCore.Mvc.CompatibilityVersion.Version_3_0);
-            
+
             //Create an Instance of DbContext that interact with the database
             services.AddDbContext<EmployeeContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("TestEmployeeConnection")));
 
-            services.AddSwaggerGen(c => 
+            services.AddSwaggerGen(c =>
             {
-               // c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
-                c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo  { Title ="Employee API", Version="v1" });
-               
+                // c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
+                c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "Employee API", Version = "v1" });
+
             }
             );
         }
@@ -64,7 +59,7 @@ namespace CoreMVCBasicCURD
 
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Employee Api");              
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Employee Api");
             });
 
             // using declared services in ConfigureServices

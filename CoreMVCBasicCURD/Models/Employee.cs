@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace CoreMVCBasicCURD.Models
 {
@@ -13,8 +9,8 @@ namespace CoreMVCBasicCURD.Models
         [Key]
         public int Id { get; set; }
 
-        [Column("FullName",TypeName = "nvarchar(250)")]
-        [Required(ErrorMessage ="please enter employee full name..")]
+        [Column("FullName", TypeName = "nvarchar(250)")]
+        [Required(ErrorMessage = "please enter employee full name..")]
         [DisplayName("Full Name")]
         public string FulllNmae { get; set; }
 

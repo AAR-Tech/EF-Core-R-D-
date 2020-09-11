@@ -1,11 +1,9 @@
-﻿using System;
+﻿using CoreMVCBasicCURD.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using CoreMVCBasicCURD.Models;
 
 namespace CoreMVCBasicCURD.Api
 {
@@ -31,7 +29,7 @@ namespace CoreMVCBasicCURD.Api
         [HttpGet("{id}")]
         public async Task<ActionResult<Employee>> GetEmployee(int id)
         {
-            if(!ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }

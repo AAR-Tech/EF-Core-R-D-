@@ -1,14 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace CoreMVCBasicCURD.Models
 {
-    public class EmployeeContext:DbContext
+    public class EmployeeContext : DbContext
     {
-        public EmployeeContext(DbContextOptions<EmployeeContext> options):base(options)
+        public EmployeeContext(DbContextOptions<EmployeeContext> options) : base(options)
         {
 
         }
