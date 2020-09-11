@@ -26,7 +26,7 @@ namespace CoreMVCBasicCURD
 
             //Create an Instance of DbContext that interact with the database
             services.AddDbContext<EmployeeContext>(options =>
-            options.UseSqlServer(Configuration.GetConnectionString("TestEmployeeConnection")));
+            options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddSwaggerGen(c =>
             {
